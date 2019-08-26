@@ -1,0 +1,31 @@
+{
+  "name": "taza-ling",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chimimode/taza-ling.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chimimode/taza-ling/issues"
+  },
+  "homepage": "https://github.com/chimimode/taza-ling#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "babel-preset-env": "^1.7.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "webpack": "^4.39.2",
+    "webpack-dev-server": "^3.8.0"
+  },
+  "dependencies": {
+    "bulma": "^0.7.5"
+  }
+}
