@@ -1,3 +1,3 @@
-//import SENTENCE from './sentence';
+import SENTENCE from './sentence';
 
 console.log(SENTENCE);

@@ -1,4 +1,6 @@
-const SENTENCE = {
+let SENTENCE = {};
+
+export default SENTENCE = {
     sample: [
         '별 하나에 추억과',
         '별 하나에 사랑과',
@@ -7,5 +9,3 @@ const SENTENCE = {
         '별 하나에 시와'
     ]
 };
-
-export {SENTENCE};
