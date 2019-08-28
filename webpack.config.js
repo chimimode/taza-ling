@@ -2,7 +2,7 @@ const webpack = require('webpack');
 const path = require('path');
 
 module.exports = {
-    entry: './src/js/index.js',
+    entry: './src/index.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
         publicPath: '/dist/',
@@ -20,6 +20,17 @@ module.exports = {
                         presets: ['@babel/preset-env']
                     }
                 }
+            },
+            {
+                test: /\.css$/,
+                use: 'css-loader'
+            },
+            {
+                test: /\.scss$/,
+                use: [
+                    "css-loader",
+                    "sass-loader"
+                ]
             }
         ]
     }
