@@ -17,7 +17,10 @@ module.exports = {
                 include: path.join(__dirname),
                 exclude: /(node_modules)|(dist)/,
                 use: {
-                    loader: 'babel-loader'
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-env']
+                    }
                 }
             },
             {
