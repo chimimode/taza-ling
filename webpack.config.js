@@ -24,8 +24,17 @@ module.exports = {
                 }
             },
             {
+                test: /\.html$/,
+                use: [
+                  {
+                    loader: "html-loader",
+                    options: { minimize: true }
+                  }
+                ]
+            },
+            {
                 test: /\.css$/,
-                use: 'css-loader'
+                use: [MiniCssExtractPlugin.loader, 'css-loader']
             },
             {
                 test: /\.scss$/,
@@ -36,13 +45,14 @@ module.exports = {
             }
         ]
     },
+    // TODO font bundle
     plugins: [
         new HtmlWebPackPlugin({
           template: "./public/index.html",
           filename: "index.html"
         }),
-        // new MiniCssExtractPlugin({
-        //   filename: "style.css"
-        // })
+        new MiniCssExtractPlugin({
+          filename: "style.css"
+        })
     ]
 };
