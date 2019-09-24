@@ -11,9 +11,13 @@ module.exports = {
     "rules": {
         // 0 "off", 1 "warn" 2 "error"
         "no-console": "warn",
-        "quotes": [ "error", "single" ],
+        "quotes": [ "error", "single", {
+            'allowTemplateLiterals': true
+        }],
         "no-underscore-dangle": "warn",
         "no-plusplus": [ "error", { "allowForLoopAfterthoughts": true }],
         "comma-dangle": [ "error", "never"],
+        "linebreak-style": ["error", "windows"],
+        "no-param-reassign": ["error", { "props": false }]
     }
 };

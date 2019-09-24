@@ -1,4 +1,5 @@
 import Typing from './typing/typing';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import 'bulma/css/bulma.css';
 
 export default class TazaLing {
