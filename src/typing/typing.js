@@ -17,9 +17,16 @@ export default class Typing {
       start: false
     };
 
+    this.result = {
+      size: 0,
+      correct: 0,
+      percent: 0,
+      time: 0
+    };
+
     this.bind = () => {
       const timer = new Timer();
-      const cheker = new Cheker(`${this.id.check}`, `${SENTENCE.sample}`);
+      const cheker = new Cheker(`${SENTENCE.sample}`);
 
       document.write(`
         <div id="${this.id.sentence}">${SENTENCE.sample}</div>
@@ -46,13 +53,17 @@ export default class Typing {
         // TODO check spells
         if (event.key === 'Enter') {
           timer.end();
-          timer.speed();
+
+          console.log(cheker.accuracy());
+
+          console.log(timer.speed());
         }
       });
 
       input.addEventListener('keyup', () => {
         // event.kdy === 'Backspace' 지우는거 체크..(keyCode대신 key쓰는걸로)
-        cheker.spellCheck(input.value);
+        cheker.typing(`${this.id.check}`, input.value);
+        // cheker.spellCheck(input.value);
       });
     };
   }

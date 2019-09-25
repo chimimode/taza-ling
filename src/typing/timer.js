@@ -3,30 +3,25 @@ export default class Timer {
     this.state = {
       start: 0,
       end: 0,
-      sentence: '',
-      input: ''
+      correct: 1
     };
 
     this.start = () => {
-      console.log('start');
       this.state.start = performance.now();
     };
 
     this.end = () => {
-      console.log('end');
       this.state.end = performance.now();
-
-      this.speed();
     };
 
     this.speed = () => {
-      console.log(`speed : ${this.state.end - this.state.start} milliseconds`);
+      const seconds = (this.state.end - this.state.start) / 1000;
+      return seconds / this.state.correct;
     };
   }
 
   set(option) {
-    this.state.sentence = option.sentence;
-    this.state.input = option.input;
+    this.state.correct = option.correct;
   }
 
   start() {

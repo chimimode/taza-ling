@@ -15,7 +15,6 @@ module.exports = {
             'allowTemplateLiterals': true
         }],
         "no-underscore-dangle": "warn",
-        "no-plusplus": [ "error", { "allowForLoopAfterthoughts": true }],
         "comma-dangle": [ "error", "never"],
         "linebreak-style": ["error", "windows"],
         "no-param-reassign": ["error", { "props": false }]
